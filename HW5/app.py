@@ -138,11 +138,6 @@ def index():
 def all_lists():
     form = DeleteButtonForm()
     lsts = TodoList.query.all()
-    list_a = []
-    for item in lsts:
-
-        list_a.append(item.title)
-
     return render_template('all_lists.html',todo_lists=lsts, form=form)
 
 # TODO 364: Update the all_lists.html template and the all_lists view function such that there is a delete button available for each ToDoList saved.
